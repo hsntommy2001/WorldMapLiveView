@@ -20,7 +20,7 @@ const MapPage = () => {
   });
 
   return (
-    <MapContainer center={[0, 0]} zoom={2} style={{ height: '90vh' }}>
+    <MapContainer center={[30, 0]} zoom={3} style={{ height: '90vh' }}>
       <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
 
       {markers.map((marker, index) => (
@@ -38,7 +38,7 @@ const MapPage = () => {
               title={`YouTube video player ${index + 1}`}
               width="100%"
               height="315"
-              src={marker.videoUrl}
+              src={marker.videoUrl +'?autoplay=1&mute=1'}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
